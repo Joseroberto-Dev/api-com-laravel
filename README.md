@@ -59,32 +59,43 @@ php artisan migrate
 # Inicie o servidor local
 php artisan serve
 ```
-🛠️ Rotas da API
+## 🛠️ Rotas da API
 
-GET	/api/produtos     Listar todos os produtos
-GET	/api/produtos/{id} Buscar produto por ID
-POST /api/produtos    Cadastrar novo produto
-PUT	/api/produtos/{id} Atualizar produto
-DELETE /api/produtos/{id} Deletar produto
+| Método | Rota                   | Descrição                  |
+|--------|------------------------|----------------------------|
+| GET    | `/api/produtos`        | Listar todos os produtos   |
+| GET    | `/api/produtos/{id}`   | Buscar produto por ID      |
+| POST   | `/api/produtos`        | Cadastrar novo produto     |
+| PUT    | `/api/produtos/{id}`   | Atualizar produto          |
+| DELETE | `/api/produtos/{id}`   | Deletar produto            |
 
-Todas as respostas são no formato JSON.
+> Todas as respostas são no formato **JSON**.
 
-🧪 Exemplo de corpo JSON para POST/PUT
+---
+
+## 🧪 Exemplo de corpo JSON para POST/PUT
+
+``json
 {
   "nome": "Mouse Gamer",
   "preco": 299.90,
   "estoque": 15
 }
+``
+## ✅ Segurança
 
-✅ Segurança
-Arquivo .env está protegido via .gitignore
+- Arquivo `.env` está protegido via `.gitignore`
+- Regras de validação foram aplicadas para evitar dados inválidos
+- Apenas campos permitidos são aceitos via `fillable`
 
-Regras de validação foram aplicadas para evitar dados inválidos
+---
 
-Apenas campos permitidos são aceitos via fillable
+## 📄 Licença
 
-📄 Licença
-Este projeto está sob a licença MIT.
+Este projeto está sob a licença **MIT**.
 
-✍️ Autor
-Feito com 💻 e ☕ por Jose Roberto Santos Oliveira
+---
+
+## ✍️ Autor
+
+Feito com 💻 e ☕ por **José Roberto Santos Oliveira**
